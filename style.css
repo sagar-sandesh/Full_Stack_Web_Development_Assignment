@@ -1,0 +1,141 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Header */
+header {
+  background: #004466;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* allow wrapping on small screens */
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a.active,
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  background: #e6f2f5;
+  flex-wrap: wrap; /* stack on small screens */
+}
+
+.hero img {
+  max-width: 300px;
+  width: 100%;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+}
+
+.hero-text h2 {
+  margin-top: 0;
+}
+
+/* Products */
+.product-grid {
+  display: flex;
+  gap: 1.5rem;
+  padding: 2rem;
+  justify-content: center;
+  flex-wrap: wrap; /* makes products wrap on mobile */
+}
+
+.product-card {
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  width: 250px;
+  flex: 1 1 250px; /* grow/shrink responsively */
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Contact */
+main address {
+  background: #fff;
+  padding: 1rem;
+  margin: 2rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  line-height: 1.8;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #004466;
+  color: #fff;
+  margin-top: 2rem;
+}
+
+/* ===================== */
+/* Media Queries (mobile) */
+/* ===================== */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero img {
+    margin-right: 0;
+  }
+
+  .product-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card {
+    width: 90%;
+  }
+
+  main address {
+    margin: 1rem;
+  }
+}
