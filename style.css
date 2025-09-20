@@ -1,40 +1,43 @@
-/* General styles */
+/* General */
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  line-height: 1.6;
-  background: #f9f9f9;
-  color: #333;
+  margin: 1rem;
+  background: moccasin;
+  color: midnightblue;
+  line-height: 1.5;
 }
 
 /* Header */
 header {
   background: #004466;
-  color: #fff;
-  padding: 1rem;
+  color: Gray;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  flex-wrap: wrap; /* allow wrapping on small screens */
+  padding: 1rem 1rem;
 }
 
-header h1 {
-  margin: 0;
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 nav ul {
   list-style: none;
+  margin: 1rem;
+  padding: 1rem;
   display: flex;
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
+  gap: 2rem;
   flex-wrap: wrap;
 }
 
 nav a {
-  color: #fff;
-  text-decoration: none;
+  color: white;
+  text-decoration: aliceblue;
   font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 4px
+
 }
 
 nav a.active,
@@ -42,100 +45,97 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Hero section */
-.hero {
-  display: flex;
-  align-items: center;
-  padding: 2rem;
-  background: #e6f2f5;
-  flex-wrap: wrap; /* stack on small screens */
-}
-
-.hero img {
-  max-width: 300px;
-  width: 100%;
-  margin-right: 2rem;
-  margin-bottom: 1rem;
-  border-radius: 6px;
-}
-
-.hero-text h2 {
-  margin-top: 0;
-}
-
-/* Products */
-.product-grid {
-  display: flex;
-  gap: 1.5rem;
-  padding: 2rem;
-  justify-content: center;
-  flex-wrap: wrap; /* makes products wrap on mobile */
-}
-
-.product-card {
-  background: #fff;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  text-align: center;
-  width: 250px;
-  flex: 1 1 250px; /* grow/shrink responsively */
-}
-
-.product-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
-
-/* Contact */
-main address {
-  background: #fff;
-  padding: 1rem;
-  margin: 2rem;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  line-height: 1.8;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #004466;
-  color: #fff;
+/* Hero Image */
+.hero-img img {
+  background: yellow;
+  width: 90%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+  margin-left: 4rem;
+  margin-right: 4rem;
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
-/* ===================== */
-/* Media Queries (mobile) */
-/* ===================== */
+/* Intro text */
+.intro {
+  max-width: 900px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+/* Product Cards */
+.card-section {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.card {
+  background: yellowgreen;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 280px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card img {
+  width: 100%;
+  height: 20rem;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 1px 4px 10px rgba(0, 0, 1, 1);
+}
+
+/* Responsive (Mobile) */
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero img {
-    margin-right: 0;
-  }
-
-  .product-grid {
+  .card-section {
     flex-direction: column;
     align-items: center;
   }
 
-  .product-card {
-    width: 90%;
+  .card {
+    width: 100%;
   }
+}
 
-  main address {
-    margin: 1rem;
+/* Contact page layout */
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: flex-start;
+}
+
+.contact-info {
+  flex: 1 1 300px;
+}
+
+.map {
+  flex: 1 1 400px;
+  min-height: 500px;
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* On small screens stack vertically */
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
   }
 }
