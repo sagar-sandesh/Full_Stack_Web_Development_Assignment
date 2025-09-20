@@ -18,8 +18,9 @@ header {
 }
 
 .logo {
-  font-size: 1.2rem;
-  font-weight: bold;
+  width: 80px;
+  display: run-in ;
+  margin: 2px auto;
 }
 
 nav ul {
@@ -58,45 +59,35 @@ nav a:hover {
   margin-bottom: 2rem;
 }
 
-/* Intro text */
-.intro {
-  max-width: 900px;
-  margin: 1.5rem auto;
-  padding: 0 1rem;
-  text-align: center;
-}
-
-/* Product Cards */
-.card-section {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  padding: 2rem;
-}
-
-.card {
-  background: yellowgreen;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  width: 280px;
+main {
+  background-color: #9c9cac;
   padding: 1rem;
+}
+
+section h2 {
   text-align: center;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.card img {
   width: 100%;
-  height: 20rem;
-  border-radius: 6px;
-  margin-bottom: 0.5rem;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 1px 4px 10px rgba(0, 0, 1, 1);
+article {
+  box-sizing: border-box;
+  background-color: rgb(238, 238, 238);
+  flex: auto;
+  margin: 0.5rem;
+  padding: 1rem;
 }
 
+article img {
+  max-width: 100%;
+}
+section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+article{
+  width: 30%;
+}
 /* Responsive (Mobile) */
 @media (max-width: 768px) {
   .card-section {
@@ -109,7 +100,6 @@ nav a:hover {
   }
 }
 
-/* Contact page layout */
 .contact-section {
   display: flex;
   flex-wrap: wrap;
@@ -136,6 +126,6 @@ nav a:hover {
 /* On small screens stack vertically */
 @media (max-width: 768px) {
   .contact-section {
-    flex-direction: column;
+    flex-direction: row;
   }
 }
