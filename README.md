@@ -1,2 +1,4 @@
 # Full_Stack_Web_Development_Assignment
-This repository is all about the assignment given by the teachers.
+
+The website link as given below:
+https://users.metropolia.fi/~sagaro/Full_Stack_Web_Development_Assignment/index.html
