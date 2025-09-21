@@ -1,19 +1,17 @@
-/* General */
+
 body {
   font-family: Arial, sans-serif;
   margin: 1rem;
-  background: moccasin;
-  color: midnightblue;
+  background: bisque ;
+  color: black;
   line-height: 1.5;
 }
 
-/* Header */
+
 .navbar {
   display: flex;
   justify-content: space-between;
-  background: greenyellow ;
-  padding: 10px 20px;
-  position: fixed;
+  background: #51655A  ;
   top: 0;
   left: 0;
   right: 0;
@@ -23,9 +21,12 @@ body {
   width: 80px;
   align-items: start;
   display: run-in ;
-  margin: 2px;
+  margin: 0px;
 }
-
+.description p{
+  padding-left: 2rem;
+  padding-right:2rem;
+}
 nav ul {
   list-style: none;
   margin: 1rem;
@@ -44,21 +45,26 @@ nav a {
 
 }
 
-nav a.active,
-nav a:hover {
-  text-decoration: yellow ;
-}
 
 .hero-img img {
-  background: yellow;
+  background: bisque ;
   width: 100%;
   height: 350px;
   object-fit: cover;
   display: block;
   margin-left: 2rem;
   margin-right: 2rem;
-  margin-top: 8rem;
   margin-bottom: 2rem;
+}
+
+.text-wrapper{
+  width: 100%;
+
+}
+section h1{
+  text-align: center;
+  color: green;
+  line-height: 2rem;
 }
 
 main {
@@ -73,14 +79,36 @@ section h2 {
 
 article {
   box-sizing: border-box;
-  background-color: rgb(238, 238, 238);
+  background-color: azure;
   flex: auto;
   margin: 0.5rem;
   padding: 1rem;
 }
+figure .card-section{
+  align-items: center;
 
+}
 article img {
   max-width: 100%;
+  height: 200px;
+  width: 400px;
+  background: #bbbbbb;
+  object-fit: fill;
+  color: #fc7e00;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+article h3{
+  padding-left:2.5rem;
+}
+
+article p{
+  padding-left: 2.5rem;
+  padding-right: 2rem;
 }
 section {
     display: flex;
@@ -90,7 +118,7 @@ article{
   width: 30%;
 }
 
-/* Responsive (Mobile) */
+
 @media (max-width: 768px) {
   .card-section {
     flex-direction: column;
@@ -134,10 +162,14 @@ article{
   margin-top: 4rem;
   margin-bottom: 2rem;
 }
-
-/* On small screens stack vertically */
 @media (max-width: 768px) {
   .contact-section {
     flex-direction: column;
   }
+   .product-section{
+    display: none;
+   }
+  .product-section article{
+  width: 100%;
+}
 }
