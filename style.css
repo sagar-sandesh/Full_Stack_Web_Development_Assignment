@@ -38,7 +38,7 @@ nav ul {
 
 nav a {
   color: white;
-  text-decoration: aliceblue;
+  text-decoration: bisque ;
   font-weight: bold;
   padding: 0.5rem 1rem;
   border-radius: 4px
@@ -68,7 +68,7 @@ section h1{
 }
 
 main {
-  background-color: #9c9cac;
+  background-color: antiquewhite ;
   padding: 1rem;
 }
 
